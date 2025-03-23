@@ -6,9 +6,11 @@ function preload() {
 }
 
 function setup() {
-    createCanvas(windowWidth, windowHeight, WEBGL);
-    noStroke();
-    audio = new Theremin();  // オーディオクラスのインスタンス
+  createCanvas(windowWidth, windowHeight, WEBGL);
+  noStroke();
+  audio = new Theremin();
+  
+  shaderProgram.setUniform('resolution', [width, height]); // ←追加
 }
 
 function draw() {
