@@ -24,3 +24,10 @@ function draw() {
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
 }
+
+function keyPressed() {
+    if (['c', 'd', 'e'].includes(key.toLowerCase())) {
+        audio.setKey(key);
+        console.log("Key changed to:", key.toUpperCase());
+    }
+}
